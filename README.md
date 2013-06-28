@@ -1,12 +1,10 @@
-code-guide-aerial
-=================
-
 Aerial Applications version of the code-guide. To be used internally.
+-----------------
 =================
 
 
-# HTML and CSS code guide
-Standards for developing flexible, durable, and sustainable HTML and CSS.
+# HTML, and CSS Code Guide
+Standards for developing flexible, durable, and sustainable HTML, and CSS.
 
 
 ----------
@@ -43,7 +41,7 @@ Standards for developing flexible, durable, and sustainable HTML and CSS.
 
 > All code in any code base should look like a single person typed it, no matter how many people contributed.
 
-This means strictly enforcing these agreed upon guidelines at all times. For additions or contributions, please [file an issue on GitHub](https://github.com/mdo/code-guide).
+This means strictly enforcing these agreed upon guidelines at all times. For additions or contributions, please [file an issue on GitHub](https://github.com/Ganginator/code-guide-aerial).
 
 
 ----------
@@ -54,12 +52,17 @@ This means strictly enforcing these agreed upon guidelines at all times. For add
 
 ### HTML syntax
 
-* Use soft-tabs with two spaces
-* Nested elements should be indented once (2 spaces)
-* Always use double quotes, never single quotes
-* Don't include a trailing slash in self-closing elements
+* Use hard-tabs, the actual Tab key, not soft-tabs, with two spaces.
+* Nested elements should be indented once. (1 Tab key)
+* Do not nest the <body>, or any page wrappers.
+* Add two spaces between sections, and one space between content.
+* Always use double quotes, never single quotes.
+* Include a trailing slash in self-closing elements.
+* Comment close all elements with their id's, and classes.
+
 
 **Incorrect example:**
+
 
 ````html
 <!DOCTYPE html>
@@ -68,29 +71,57 @@ This means strictly enforcing these agreed upon guidelines at all times. For add
 <title>Page title</title>
 </head>
 <body>
-<img src='images/company-logo.png' alt='Company' />
+<div id="correct" class="example">
+<img src='images/company-logo.png' alt='Company'>
 <h1 class='hello-world'>Hello, world!</h1>
+</div>
 </body>
 </html>
 ````
 
+
 **Correct example:**
+
 
 ````html
 <!DOCTYPE html>
+
+
 <html>
-  <head>
-    <title>Page title</title>
-  </head>
-  <body>
-    <img src="images/company-logo.png" alt="Company">
-    <h1 class="hello-world">Hello, world!</h1>
-  </body>
+
+
+<head>
+
+
+ <title>Page title</title>
+ 
+ 
+</head>
+
+
+<body>
+
+
+<div id="correct" class="example">
+
+
+ <img src="images/company-logo.png" alt="Company" />
+ 
+ <h1 class="hello-world">Hello, world!</h1><!-- / .hello-world -->
+ 
+ 
+</div><!-- / #correct .example -->
+
+
+</body>
+
+
 </html>
 ````
 
 
 ### HTML5 doctype
+
 
 Enforce standards mode in every browser possible with this simple doctype at the beginning of every HTML page.
 
@@ -99,27 +130,33 @@ Enforce standards mode in every browser possible with this simple doctype at the
 ````
 
 
-### Pragmatism over semantics
+### Pragmatism Over Semantics
 
-Strive to maintain HTML standards and semantics, but don't sacrifice pragmatism. Use the least amount of markup with the fewest intricacies whenever possible.
+
+Strive to maintain HTML standards, and semantics, but don't sacrifice pragmatism. Use the least amount of markup with the fewest intricacies whenever possible.
 
 
 ### Attribute order
 
+
 HTML attributes should come in this particular order for easier reading of code.
 
-* class
+This order considers CSS Specificity, see below.
+
 * id
+* class
 * data-*
 * for|type|href
 
 Such that your markup looks like:
 
 ````html
-<a class="" id="" data-modal="" href="">Example link</a>
+<a id="" class="" data-modal="" href="">Example link</a>
 ````
 
-### JavaScript generated markup
+
+### JavaScript Generated Markup
+
 
 Writing markup in a javascript file makes the content harder to find, harder to edit, and less performant. Don't do it.
 
@@ -129,7 +166,23 @@ Writing markup in a javascript file makes the content harder to find, harder to 
 
 ## CSS
 
+
+### CSS Specificity
+
+1 = !important Class
+ +10000 Points
+2 = Inline Styling, Style Attributes
+ +1000 Points
+3 = Identifiers, Types, Psuedo-elements
+	+100 Points
+4 = Classes, Psuedo-classes, Attributes
+	+10 Points
+5 = HTML, Elements, Content Elements
+	+1 Points
+ 
+
 ### CSS syntax
+
 
 * Use soft-tabs with two spaces
 * When grouping selectors, keep individual selectors to a single line
