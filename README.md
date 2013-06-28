@@ -448,7 +448,7 @@ span { ... }
 
 Always write copy, including headings in [sentence case](http://en.wikipedia.org/wiki/Letter_case#Usage). In other words, aside from titles, and proper nouns, only the first word should be capitalized.
 
-Always write code comments, in CAPS LOCK, with lowercase reference. In other words, all upercase letters, unless you are refering to an element. (i.e. <code><!-- FIXED body .class, AND #id LOCATION --></code>)
+Always write code comments, in CAPS LOCK, with lowercase references. In other words, all upercase letters, unless you are refering to an element, class, id, etc... (i.e. <!-- FIXED body .class, AND #id LOCATION -->)
 
 ----------
 
