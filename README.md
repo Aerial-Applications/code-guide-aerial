@@ -165,6 +165,7 @@ Writing markup in a javascript file makes the content harder to find, harder to 
 
 ### CSS Specificity
 
+````
 1 = !important Class
 	+10000 Points
 2 = Inline Styling, Style Attributes
@@ -175,7 +176,8 @@ Writing markup in a javascript file makes the content harder to find, harder to 
 	+10 Points
 5 = HTML, Elements, Content Elements
 	+1 Points
- 
+````
+
 
 ### CSS syntax
 
