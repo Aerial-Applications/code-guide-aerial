@@ -72,7 +72,7 @@ This means strictly enforcing these agreed upon guidelines at all times. For add
 <title>Page title</title>
 </head>
 <body>
-<div id="correct" class="example">
+<div id="incorrect" class="example">
 <img src='images/company-logo.png' alt='Company'>
 <h1 class='hello-world'>Hello, world!</h1>
 </div>
